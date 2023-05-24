@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    max-width: 100%;
+    min-height: 100vh;
+    background-color: hsl(185, 41%, 84%);
+    font-family: 'Space Mono', monospace;
+}
+
+.container {
+    max-width: 1000px;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 3em;
+}
+
+h1 {
+    letter-spacing: 0.3em;
+    color: hsl(183, 100%, 15%);
+    margin-bottom: 2em;
+}
+
+.calculator {
+    background-color: hsl(0, 0%, 100%);
+    padding: 20px;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    text-align: left;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.input-field > .tip-percentage-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 0.4em;
+}
+
+.input-field > .tip-percentage-buttons > button {
+    width: calc(50% - 8px);
+    cursor: pointer;
+    font-family: 'Space Mono', monospace;
+    padding: 4px 0;
+    font-size: 20px;
+    border: none;
+    border-radius: 0.2em;
+}
+
+.input-field > .tip-percentage-buttons > button:not(.tip-custom) {
+    background-color: hsl(183, 100%, 15%);
+    color: white;
+}
+
+.tip-custom {
+    color: hsl(186, 14%, 43%);
+}
+
+.input-field:first-child {
+    margin-bottom: 1.5em;
+}
+
+.input-field > label, p {
+    margin-bottom: 0.5em;
+    color: hsl(186, 14%, 43%);
+}
+
+.dollar-sign {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translate(-50%);
+}
+
+#bill-value {
+    text-align: right;
+    padding: 0.5em;
+    font-family: 'Space Mono', monospace;
+    font-size: 20px;
+    width: 100%;
+    color: hsl(183, 100%, 15%);
+}
+
+#bill-value::-webkit-inner-spin-button,
+#bill-value::-webkit-inner-spin-button {
+    display: none;
+}
+
+
