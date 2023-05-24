@@ -24,11 +24,11 @@ h1 {
     margin-bottom: 2em;
 }
 
-.calculator {
+.calculator-wrapper {
     background-color: hsl(0, 0%, 100%);
     padding: 20px;
-    border-top-left-radius: 1em;
-    border-top-right-radius: 1em;
+    border-top-left-radius: 0.8em;
+    border-top-right-radius: 0.8em;
     text-align: left;
 }
 
@@ -43,6 +43,7 @@ h1 {
     flex-wrap: wrap;
     gap: 16px;
     margin-top: 0.4em;
+    margin-bottom: 1.5em;
 }
 
 .input-field > .tip-percentage-buttons > button {
@@ -73,14 +74,13 @@ h1 {
     color: hsl(186, 14%, 43%);
 }
 
-.dollar-sign {
+.image {
     position: absolute;
-    top: 50%;
-    left: 16px;
-    transform: translate(-50%);
+    top: 55%;
+    left: 10px;
 }
 
-#bill-value {
+input[type="number"] {
     text-align: right;
     padding: 0.5em;
     font-family: 'Space Mono', monospace;
@@ -89,9 +89,28 @@ h1 {
     color: hsl(183, 100%, 15%);
 }
 
-#bill-value::-webkit-inner-spin-button,
-#bill-value::-webkit-inner-spin-button {
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
     display: none;
 }
 
+.result-wrapper {
+    background-color: hsl(183, 100%, 15%);
+    padding: 20px 14px;
+    margin-top: 2.4em;
+    border-radius: 0.8em;
+}
 
+.result {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.result > p {
+    color: white;
+}
+
+.result > p > span {
+    color: hsl(186, 14%, 43%);
+}

@@ -21,7 +21,7 @@
           <form class="calculator">
             <div class="input-field">
               <label for="bill-value">Bill</label>
-              <span class="dollar-sign">
+              <span class="image">
                 <img src="./images/icon-dollar.svg" alt="dollar">
               </span>
               <input id="bill-value" type="number">
@@ -40,11 +40,29 @@
             </div>
 
             <div class="input-field">
-              <label for="bill-value">Number of people</label>
-              <span class="dollar-sign"></span>
-              <input id="bill-value" type="number">
+              <label for="people-count">Number of people</label>
+              <span class="image">
+                <img src="./images/icon-person.svg" alt="dollar">
+              </span>
+              <input id="people-count" type="number">
             </div>
           </form>
+
+          <div class="result-wrapper">
+
+            <div class="result">
+              <p>Tip amount <br> <span>/person</span></p>
+              <span class="tip-amount">25</span>
+            </div>
+
+            <div class="result">
+              <p>Total <br> <span>/person</span></p>
+              <span class="total-value">25</span>
+            </div>
+
+            <button class="reset-btn">RESET</button>
+
+          </div>
         </div>
       </div>
     </section>
