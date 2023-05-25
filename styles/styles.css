@@ -56,6 +56,12 @@ h1 {
     border-radius: 0.2em;
 }
 
+@media screen and (min-width: 600px) {
+    .input-field > .tip-percentage-buttons > button {
+        width: 100%;
+    }
+}
+
 .input-field > .tip-percentage-buttons > button:not(.tip-custom) {
     background-color: hsl(183, 100%, 15%);
     color: white;
@@ -87,6 +93,8 @@ input[type="number"] {
     font-size: 20px;
     width: 100%;
     color: hsl(183, 100%, 15%);
+    border: none;
+    background-color: hsl(189, 41%, 97%);
 }
 
 input[type="number"]::-webkit-inner-spin-button,
@@ -96,7 +104,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .result-wrapper {
     background-color: hsl(183, 100%, 15%);
-    padding: 20px 14px;
+    padding: 40px 30px;
     margin-top: 2.4em;
     border-radius: 0.8em;
 }
@@ -105,12 +113,65 @@ input[type="number"]::-webkit-inner-spin-button {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 1.5em;
 }
 
 .result > p {
     color: white;
+    margin-bottom: 0;
 }
 
 .result > p > span {
     color: hsl(186, 14%, 43%);
+}
+
+.result > span {
+    font-size: 24px;
+    color: hsl(172, 67%, 45%);
+}
+
+.reset-btn {
+    width: 100%;
+    padding: 0.4em 0;
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+    font-family: 'Space Mono', monospace;
+    font-size: 20px;
+    border: none;
+    border-radius: 0.2em;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 800px) {
+    .calculator-wrapper {
+        display: flex;
+        gap: 40px;
+        border-bottom-left-radius: 0.8em;
+        border-bottom-right-radius: 0.8em;
+        padding: 2em;
+    }
+
+    .calculator {
+        width: 50%;
+    }
+
+    .result-wrapper {
+        width: 50%;
+        margin-top: 0 !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .input-field > .tip-percentage-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin-top: 0.4em;
+        margin-bottom: 1.5em;
+    }
+    
+    .input-field > .tip-percentage-buttons > button {
+        width: calc(33.3% - 11.5px) !important;
+    }
 }
