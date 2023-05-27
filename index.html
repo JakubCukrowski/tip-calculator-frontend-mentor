@@ -24,27 +24,30 @@
               <span class="image">
                 <img src="./images/icon-dollar.svg" alt="dollar">
               </span>
-              <input id="bill-value" type="number">
+              <input placeholder="0" id="bill-value" type="number">
             </div>
   
             <div class="input-field">
               <p class="tip-percentage-label">Select tip %</p>
               <div class="tip-percentage-buttons">
-                <button class="tip-5">5%</button>
-                <button class="tip-10">10%</button>
-                <button class="tip-15">15%</button>
-                <button class="tip-25">25%</button>
-                <button class="tip-50">50%</button>
-                <button class="tip-custom">Custom</button>
+                <button data-value="0.05">5%</button>
+                <button data-value="0.10">10%</button>
+                <button data-value="0.15">15%</button>
+                <button data-value="0.25">25%</button>
+                <button data-value="0.50">50%</button>
+                <input id="custom" type="text" value="Custom">
               </div>
             </div>
 
             <div class="input-field">
-              <label for="people-count">Number of people</label>
+              <label for="people-count">Number of people 
+                <span class="error-zero">Can't be zero</span>
+                <span class="error-negative">Can't be negative</span>
+              </label>
               <span class="image">
                 <img src="./images/icon-person.svg" alt="dollar">
               </span>
-              <input id="people-count" type="number">
+              <input placeholder="0" id="people-count" type="number">
             </div>
           </form>
 
@@ -62,7 +65,7 @@
               </div>
             </div>
 
-            <button class="reset-btn">RESET</button>
+            <button class="reset-btn" disabled>RESET</button>
 
           </div>
         </div>
