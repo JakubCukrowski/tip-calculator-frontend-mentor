@@ -58,6 +58,11 @@ h1 {
     color: white;
 }
 
+.input-field > .tip-percentage-buttons > button:hover {
+    color: hsl(183, 100%, 15%);
+    background-color: hsl(185, 41%, 84%);
+}
+
 .input-field > .tip-percentage-buttons > input {
     width: 30%;
     text-align: center;
@@ -103,7 +108,7 @@ h1 {
     left: 10px;
 }
 
-input[type="number"] {
+input[type="number"]:not(#custom) {
     text-align: right;
     padding: 0.5em;
     font-family: 'Space Mono', monospace;
@@ -115,7 +120,7 @@ input[type="number"] {
     border-radius: 0.2em;
 }
 
-input[type="number"]:focus,
+input[type="number"]:not(#custom):focus,
 #custom:focus {
     outline: 2px solid hsl(172, 67%, 45%);
 }
@@ -170,6 +175,10 @@ input[type="number"]::-webkit-inner-spin-button {
     cursor: pointer;
 }
 
+.reset-btn:hover {
+    background-color:  hsl(185, 41%, 84%);
+}
+
 @media screen and (min-width: 800px) {
     .calculator-wrapper {
         display: flex;
@@ -218,6 +227,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .selected {
     background-color: hsl(172, 67%, 45%) !important;
+    color: hsl(183, 100%, 15%) !important;
 }
 
 .error-zero,
@@ -229,4 +239,8 @@ input[type="number"]::-webkit-inner-spin-button {
 button:disabled {
     background-color: hsl(186, 14%, 43%);
     cursor: auto
+}
+
+button:disabled:hover {
+    background-color: hsl(186, 14%, 43%) !important; 
 }
