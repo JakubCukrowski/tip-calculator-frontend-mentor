@@ -66,10 +66,14 @@ const typeChangeToNumber = (e) => {
     if (event.type === "text") {
         event.type = "number";
     }
+    tipPrecentButtons.forEach(button => {
+        if (button.classList.contains("selected")) {
+            totalValueSpan.innerText = "$0.00";
+            tipAmountSpan.innerText = "$0.00";
+        }
+    });
     tipPrecentButtons.forEach(button => button.classList.remove("selected"));
     percentageValue = 0;
-    totalValueSpan.innerText = "$0.00";
-    tipAmountSpan.innerText = "$0.00";
 };
 const typeChangeToText = (e) => {
     const event = e.target;
